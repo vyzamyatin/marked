@@ -65,6 +65,7 @@ function runTests(engine, options) {
     , options = options || {}
     , files = options.files || load()
     , complete = 0
+    , skipped = 0
     , failed = 0
     , failures = []
     , keys = Object.keys(files)
@@ -86,6 +87,13 @@ main:
   for (; i < len; i++) {
     filename = keys[i];
     file = files[filename];
+
+    // @hmhealey skip known broken tests
+    if (filename === 'def_blocks.text') {
+      console.log('#%d. %s skipped.', i + 1, filename);
+      skipped++;
+      continue;
+    }
 
     if (marked._original) {
       marked.defaults = marked._original;
@@ -125,7 +133,6 @@ main:
     for (; j < l; j++) {
       if (text[j] !== html[j]) {
         failed++;
-        failures.push(filename);
 
         text = text.substring(
           Math.max(j - 30, 0),
@@ -154,13 +161,8 @@ main:
     console.log('#%d. %s completed.', i + 1, filename);
   }
 
-  console.log('%d/%d tests completed successfully.', complete, len);
-  if (failed) console.log('%d/%d tests failed.', failed, len);
-
-  // Tests currently failing.
-  if (~failures.indexOf('def_blocks.text')) {
-    failed -= 1;
-  }
+  console.log('%d/%d tests completed successfully (%d skipped).', complete, len - skipped, skipped);
+  if (failed) console.log('%d/%d tests failed.', failed, len - skipped);
 
   return !failed;
 }
