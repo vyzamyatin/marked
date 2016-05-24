@@ -1,0 +1,1 @@
+[link ending in ?](http://example.com/foo?) would cause catastrophic backtracking
