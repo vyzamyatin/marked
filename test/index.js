@@ -24,7 +24,8 @@ function load() {
     , list
     , file
     , i
-    , l;
+    , l
+    , html;
 
   list = fs
     .readdirSync(dir)
@@ -42,9 +43,17 @@ function load() {
 
   for (; i < l; i++) {
     file = path.join(dir, list[i]);
+
+    // @harrison ignore files with no expected output so we can just make sure they run without checking their output
+    html = null;
+    try {
+      fs.accessSync(file); // throws if unable to access file
+      html = fs.readFileSync(file.replace(/[^.]+$/, 'html'), 'utf8')
+    } catch (e) {}
+
     files[path.basename(file)] = {
       text: fs.readFileSync(file, 'utf8'),
-      html: fs.readFileSync(file.replace(/[^.]+$/, 'html'), 'utf8')
+      html: html
     };
   }
 
@@ -121,8 +130,8 @@ main:
 
     try {
       text = engine(file.text).replace(/\s/g, '');
-      html = file.html.replace(/\s/g, '');
-    } catch(e) {
+      html = file.html ? file.html.replace(/\s/g, '') : '';
+    } catch (e) {
       console.log('%s failed.', filename);
       throw e;
     }
