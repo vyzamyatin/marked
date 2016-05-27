@@ -1,1 +1,211 @@
-[link ending in ?](http://example.com/foo?) would cause catastrophic backtracking
+[link](http://example.com/url)
+[link](http://example.com/url
+[link](http://example.com/ur
+[link](http://example.com/u
+[link](http://example.com/
+[link](http://example.com
+[link](http://example.co
+[link](http://example.c
+[link](http://example.
+[link](http://example
+[link](http://exampl
+[link](http://examp
+[link](http://exam
+[link](http://exa
+[link](http://ex
+[link](http://e
+[link](http://
+[link](http:/
+[link](http:
+[link](http
+[link](htt
+[link](ht
+[link](h
+[link](
+[link]
+[link
+[lin
+[li
+[l
+[
+
+[link ending in ?](http://example.com/foo?)
+[link ending in ?](http://example.com/foo?
+[link ending in ?](http://example.com/foo
+[link ending in ?](http://example.com/fo
+[link ending in ?](http://example.com/f
+[link ending in ?](http://example.com/
+[link ending in ?](http://example.com
+[link ending in ?](http://example.co
+[link ending in ?](http://example.c
+[link ending in ?](http://example.
+[link ending in ?](http://example
+[link ending in ?](http://exampl
+[link ending in ?](http://examp
+[link ending in ?](http://exam
+[link ending in ?](http://exa
+[link ending in ?](http://ex
+[link ending in ?](http://e
+[link ending in ?](http://
+[link ending in ?](http:/
+[link ending in ?](http:
+[link ending in ?](http
+[link ending in ?](htt
+[link ending in ?](ht
+[link ending in ?](h
+[link ending in ?](
+[link ending in ?]
+[link ending in ?
+[link ending in 
+[link ending in
+[link ending i
+[link ending 
+[link ending
+[link endin
+[link endi
+[link end
+[link en
+[link e
+[link 
+[link
+[lin
+[li
+[l
+[
+
+![sd](https://example.com/image?foo=bar)
+![sd](https://example.com/image?foo=bar
+![sd](https://example.com/image?foo=ba
+![sd](https://example.com/image?foo=b
+![sd](https://example.com/image?foo=
+![sd](https://example.com/image?foo
+![sd](https://example.com/image?fo
+![sd](https://example.com/image?f
+![sd](https://example.com/image?
+![sd](https://example.com/image
+![sd](https://example.com/imag
+![sd](https://example.com/ima
+![sd](https://example.com/im
+![sd](https://example.com/i
+![sd](https://example.com/
+![sd](https://example.com
+![sd](https://example.co
+![sd](https://example.c
+![sd](https://example.
+![sd](https://example
+![sd](https://exampl
+![sd](https://examp
+![sd](https://exam
+![sd](https://exa
+![sd](https://ex
+![sd](https://e
+![sd](https://
+![sd](https:/
+![sd](https:
+![sd](https
+![sd](http
+![sd](htt
+![sd](ht
+![sd](h
+![sd](
+![sd]
+![sd
+![s
+![
+!
+
+[![aa](bb](cc)
+[![aa](bb](cc
+[![aa](bb](c
+[![aa](bb](
+[![aa](bb]
+[![aa](bb
+[![aa](b
+[![aa](
+[![aa]
+[![aa
+[![a
+[![
+[!
+[
+
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=qwer+ty
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=qwer+t
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=qwer+
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=qwer
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=qwe
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=qw
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=q
+www.example.com/foo/bar%20asdf/?foo=bar&asdf=
+www.example.com/foo/bar%20asdf/?foo=bar&asdf
+www.example.com/foo/bar%20asdf/?foo=bar&asd
+www.example.com/foo/bar%20asdf/?foo=bar&as
+www.example.com/foo/bar%20asdf/?foo=bar&a
+www.example.com/foo/bar%20asdf/?foo=bar&
+www.example.com/foo/bar%20asdf/?foo=bar
+www.example.com/foo/bar%20asdf/?foo=ba
+www.example.com/foo/bar%20asdf/?foo=b
+www.example.com/foo/bar%20asdf/?foo=
+www.example.com/foo/bar%20asdf/?foo
+www.example.com/foo/bar%20asdf/?fo
+www.example.com/foo/bar%20asdf/?f
+www.example.com/foo/bar%20asdf/?
+www.example.com/foo/bar%20asdf/
+www.example.com/foo/bar%20asdf
+www.example.com/foo/bar%20asd
+www.example.com/foo/bar%20as
+www.example.com/foo/bar%20a
+www.example.com/foo/bar%20
+www.example.com/foo/bar%2
+www.example.com/foo/bar%
+www.example.com/foo/bar
+www.example.com/foo/ba
+www.example.com/foo/b
+www.example.com/foo/
+www.example.com/foo
+www.example.com/fo
+www.example.com/f
+www.example.com/
+www.example.com
+www.example.co
+www.example.c
+www.example.
+www.example
+www.exampl
+www.examp
+www.exam
+www.exa
+www.ex
+www.e
+www.
+www
+ww
+w
+
+[foo](www.example.com/bar;)
+[foo](www.example.com/bar;
+[foo](www.example.com/bar
+[foo](www.example.com/ba
+[foo](www.example.com/b
+[foo](www.example.com/
+[foo](www.example.com
+[foo](www.example.co
+[foo](www.example.c
+[foo](www.example.
+[foo](www.example
+[foo](www.exampl
+[foo](www.examp
+[foo](www.exam
+[foo](www.exa
+[foo](www.ex
+[foo](www.e
+[foo](www.
+[foo](www
+[foo](ww
+[foo](w
+[foo](
+[foo]
+[foo
+[fo
+[f
+[
