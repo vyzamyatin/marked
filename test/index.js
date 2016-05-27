@@ -44,7 +44,7 @@ function load() {
   for (; i < l; i++) {
     file = path.join(dir, list[i]);
 
-    // @harrison ignore files with no expected output so we can just make sure they run without checking their output
+    // @hmhealey ignore files with no expected output so we can just make sure they run without checking their output
     html = null;
     try {
       fs.accessSync(file); // throws if unable to access file
