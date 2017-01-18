@@ -92,13 +92,18 @@ function runTests(engine, options) {
     marked.setOptions(options.marked);
   }
 
+  var filePattern;
+  if (options.filter) {
+    filePattern = new RegExp(options.filter, 'i');
+  }
+
 main:
   for (; i < len; i++) {
     filename = keys[i];
     file = files[filename];
 
     // @hmhealey skip known broken tests
-    if (filename === 'def_blocks.text') {
+    if ((filePattern && !filePattern.test(filename)) || filename === 'def_blocks.text') {
       console.log('#%d. %s skipped.', i + 1, filename);
       skipped++;
       continue;
@@ -475,6 +480,10 @@ function parseArg(argv) {
       case '-t':
       case '--time':
         options.time = true;
+        break;
+      case '-r':
+      case '--run':
+        options.filter = getarg();
         break;
       default:
         if (arg.indexOf('--') === 0) {
