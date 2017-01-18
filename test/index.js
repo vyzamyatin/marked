@@ -182,6 +182,21 @@ main:
 }
 
 /**
+ * See the output generated from the input given through standard input
+ */
+
+function adhoc(options) {
+  var engine = options.engine || marked;
+
+  var input = fs.readFileSync('/dev/stdin').toString();
+  console.log('\n');
+
+  console.log(engine(input))
+
+  return true;
+}
+
+/**
  * Benchmark a function
  */
 
@@ -485,6 +500,10 @@ function parseArg(argv) {
       case '--run':
         options.filter = getarg();
         break;
+      case '-a':
+      case '--adhoc':
+        options.adhoc = true;
+        break;
       default:
         if (arg.indexOf('--') === 0) {
           opt = camelize(arg.replace(/^--(no-)?/, ''));
@@ -538,6 +557,10 @@ function main(argv) {
 
   if (opt.time) {
     return time(opt);
+  }
+
+  if (opt.adhoc) {
+    return adhoc(opt);
   }
 
   return runTests(opt);
