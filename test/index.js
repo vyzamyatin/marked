@@ -92,13 +92,18 @@ function runTests(engine, options) {
     marked.setOptions(options.marked);
   }
 
+  var filePattern;
+  if (options.filter) {
+    filePattern = new RegExp(options.filter, 'i');
+  }
+
 main:
   for (; i < len; i++) {
     filename = keys[i];
     file = files[filename];
 
     // @hmhealey skip known broken tests
-    if (filename === 'def_blocks.text') {
+    if ((filePattern && !filePattern.test(filename)) || filename === 'def_blocks.text') {
       console.log('#%d. %s skipped.', i + 1, filename);
       skipped++;
       continue;
@@ -174,6 +179,21 @@ main:
   if (failed) console.log('%d/%d tests failed.', failed, len - skipped);
 
   return !failed;
+}
+
+/**
+ * See the output generated from the input given through standard input
+ */
+
+function adhoc(options) {
+  var engine = options.engine || marked;
+
+  var input = fs.readFileSync('/dev/stdin').toString();
+  console.log('\n');
+
+  console.log(engine(input))
+
+  return true;
 }
 
 /**
@@ -476,6 +496,14 @@ function parseArg(argv) {
       case '--time':
         options.time = true;
         break;
+      case '-r':
+      case '--run':
+        options.filter = getarg();
+        break;
+      case '-a':
+      case '--adhoc':
+        options.adhoc = true;
+        break;
       default:
         if (arg.indexOf('--') === 0) {
           opt = camelize(arg.replace(/^--(no-)?/, ''));
@@ -529,6 +557,10 @@ function main(argv) {
 
   if (opt.time) {
     return time(opt);
+  }
+
+  if (opt.adhoc) {
+    return adhoc(opt);
   }
 
   return runTests(opt);
