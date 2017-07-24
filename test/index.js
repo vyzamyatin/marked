@@ -134,8 +134,16 @@ main:
     }
 
     try {
-      text = engine(file.text).replace(/\s/g, '');
-      html = file.html ? file.html.replace(/\s/g, '') : '';
+      text = engine(file.text);
+      html = file.html ? file.html : '';
+
+      if (!filename.endsWith('__whitespace.text')) {
+        text = text.replace(/\s/g, '');
+        html = html.replace(/\s/g, '');
+      } else {
+        text = text.replace(/\r/g, '');
+        html = html.replace(/\r/g, '');
+      }
     } catch (e) {
       console.log('%s failed.', filename);
       throw e;
