@@ -82,6 +82,14 @@ https://groups.google.com/forum/#!msg
 
 #### These strings should not auto-link:
 
+www.
+
+http:
+
+www.asdf
+
+http://
+
 example.com
 
 readme.md
