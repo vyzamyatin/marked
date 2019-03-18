@@ -139,3 +139,11 @@ This is a question about a link http://example.com?
 [link](example.com "title with "quotes"")
 
 [link with spaces](example.com/ spaces in the url "and a title")
+
+[*This whole #sentence should be a link*](https://example.com)
+
+[_This whole #sentence should be a link_](https://example.com)
+
+*[This whole #sentence should be a link](https://example.com)*
+
+_[This whole #sentence should be a link](https://example.com)_
