@@ -140,10 +140,26 @@ This is a question about a link http://example.com?
 
 [link with spaces](example.com/ spaces in the url "and a title")
 
-[*This whole #sentence should be a link*](https://example.com)
+[*Emphasis link*](https://example.com)
 
-[_This whole #sentence should be a link_](https://example.com)
+[_Emphasis link_](https://example.com)
 
-*[This whole #sentence should be a link](https://example.com)*
+*[Emphasis link](https://example.com)*
 
-_[This whole #sentence should be a link](https://example.com)_
+_[Emphasis link](https://example.com)_
+
+**[*Strong emphasis link*](https://example.com)**
+
+__[*Strong emphasis link*](https://example.com)__
+
+**[_Strong emphasis link_](https://example.com)**
+
+__[_Strong emphasis link_](https://example.com)__
+
+*[**Strong emphasis link**](https://example.com)*
+
+*[__Strong emphasis link__](https://example.com)*
+
+_[**Strong emphasis link**](https://example.com)_
+
+_[__Strong emphasis link__](https://example.com)_
