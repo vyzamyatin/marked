@@ -139,3 +139,27 @@ This is a question about a link http://example.com?
 [link](example.com "title with "quotes"")
 
 [link with spaces](example.com/ spaces in the url "and a title")
+
+[*Emphasis link*](https://example.com)
+
+[_Emphasis link_](https://example.com)
+
+*[Emphasis link](https://example.com)*
+
+_[Emphasis link](https://example.com)_
+
+**[*Strong emphasis link*](https://example.com)**
+
+__[*Strong emphasis link*](https://example.com)__
+
+**[_Strong emphasis link_](https://example.com)**
+
+__[_Strong emphasis link_](https://example.com)__
+
+*[**Strong emphasis link**](https://example.com)*
+
+*[__Strong emphasis link__](https://example.com)*
+
+_[**Strong emphasis link**](https://example.com)_
+
+_[__Strong emphasis link__](https://example.com)_
