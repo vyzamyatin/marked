@@ -8,6 +8,12 @@ http://example.com
 
 https://example.com
 
+taco+what://example.com
+
+taco.what://example.com
+
+HTTP://example.com
+
 www.example.com
 
 www.example.com/index
