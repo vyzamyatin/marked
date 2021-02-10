@@ -69,3 +69,11 @@ breaks] across lines, but with a line-ending space.
 
 
 [link breaks]: /url/
+
+link pasted in HTML tag a <a [>](https://community.mattermost.com) should work
+
+link pasted in HTML tag a with whitespace < a [>](https://community.mattermost.com) should work
+
+link pasted in HTML tag span <span [>](https://community.mattermost.com) should work
+
+link pasted in HTML tag span with whitespace < span [>](https://community.mattermost.com) should work
